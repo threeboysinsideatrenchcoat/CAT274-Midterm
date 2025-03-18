@@ -29,10 +29,14 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //TItle Screen 
         if (Input.GetKey(KeyCode.Space) && SceneManager.GetActiveScene().buildIndex == 0)
         {
             Debug.Log("space pressed");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+        //Main Game
+
+        //Ending Screens
     }
 }
