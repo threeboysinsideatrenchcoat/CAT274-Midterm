@@ -35,8 +35,6 @@ public class GameManager : MonoBehaviour
             Debug.Log("space pressed");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
-        //Main Game
-
-        //Ending Screens
+        
     }
 }

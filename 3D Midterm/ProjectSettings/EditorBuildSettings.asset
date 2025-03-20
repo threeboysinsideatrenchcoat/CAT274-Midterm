@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Game.unity
     guid: 64b1acf35a9edeb4c9aedc7585510c11
+  - enabled: 1
+    path: Assets/Scenes/Good Job.unity
+    guid: 20b4539680f1e2f4a84a2e736f393cbd
+  - enabled: 1
+    path: Assets/Scenes/Try Again.unity
+    guid: 212f5695b07cc844c97e66c5b15d3b5e
   m_configObjects: {}

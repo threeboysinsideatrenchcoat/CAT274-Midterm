@@ -29,22 +29,22 @@ public class CharacterMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W))
         {
-            rb.AddForce(Vector3.forward * speed);
+            rb.AddForce(player.transform.forward * speed, ForceMode.Impulse);
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            rb.AddForce(Vector3.left * speed);
+            rb.AddForce(Vector3.left * speed, ForceMode.Impulse);
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            rb.AddForce(Vector3.back * speed);
+            rb.AddForce(Vector3.back * speed, ForceMode.Impulse);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            rb.AddForce(Vector3.right * speed);
+            rb.AddForce(Vector3.right * speed, ForceMode.Impulse);
         }
         //What happens when player collects carrots 
 
@@ -106,11 +106,13 @@ public class CharacterMovement : MonoBehaviour
         return deltaLook;
     }
 
-    private void OnTriggerEnter(Collider collision)
+    //Destroy Carrot
+    void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "Carrot")
         {
             Destroy(collision.gameObject);
+            CarrotCollect++;
         }
     }
 }
